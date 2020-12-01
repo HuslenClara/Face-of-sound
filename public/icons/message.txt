@@ -1,0 +1,71 @@
+insert into turul (turul_ner)
+values('ineedmiin'),
+('aimshgiin'),
+('adal yvdalt'),
+('uran zognolt');
+
+insert into customer (customer_name, customer_password, customer_phone_number, customer_address)
+values ('Буянбат',  'easyPass','90442355','bayangol duureg 10r horoo'),
+('Буянхүү', 'easyPass','90442255','bayangol duureg 10r horoo');
+
+
+insert into movie (movie_ner, movie_neelt_ognoo, movie_zohiolch, movie_garah_helber, movie_urgeljleh_hugatsaa, movie_turul_id)
+values	('The rising hawk',now(),'Michel Graham', '2d', 7000,3),
+		('Greenland',now(),'Tomas Grey', '2d', 7000,4);
+
+insert into customer (customer_name, customer_email, customer_password, customer_phone_number, customer_address)
+values ('Уянга', 'uya@gmail.com', 'rodgtsad13','90492255','bayangol duureg 10r horoo'),
+('Уянга', 'uyana@gmail.com', 'easyPass','90421215','bayangol duureg 10r horoo'),
+('Хишигт', 'khishig@gmail.com', 'student-sict-pass','90421225','bayangol duureg 10r horoo'),
+('Солонго', 'sokosok@gmail.com', 'easyPass','90421235','bayanzurkh duureg 7r horoo'),
+('Намуун', 'namunomin@gmail.com', 'rodgtsad13','90421245','chingeltei duureg 1r horoo'),
+('Зориг', 'zorigsing@gmail.com', 'easyPass','90421255','nalaikh duureg 2r horoo'),
+('Болд', 'boldpro@gmail.com', 'easyPass','90421265','bayangol duureg 10r horoo'),
+('Ука', 'uka123@gmail.com', 'hardPass','90421275','songinokhairhan duureg 3r horoo'),
+('Өлзий', 'ulzii@gmail.com', 'rodgtsad13','90421285','khanuul duureg 10r horoo'),
+('Мөнх', 'munkhuu@gmail.com', 'easyPass','90421295','bayangol duureg 10r horoo'),
+('Учрал', 'uchaka@gmail.com', 'rodgtsad13','90421205','bayangol duureg 10r horoo'),
+('Наран', 'naran@gmail.com', '12345678','90421256','bayangol duureg 10r horoo'),
+('Баатар', 'baatar@gmail.com', 'rodgtsad13','90421257','bayangol duureg 10r horoo'),
+('Билиг', 'bilig@gmail.com', 'easyPass','90421258','bayangol duureg 10r horoo'),
+('Жаргал', 'jargal@gmail.com', 'rodgtsad13','90421259','bayangol duureg 10r horoo');
+
+insert into customer (customer_name, customer_email, customer_password, customer_phone_number, customer_address)
+values ('Батхүү', 'batkhuu@gmail.com', 'easyPass','90442255','bayangol duureg 10r horoo');
+
+insert into bonus_lavlah (bonus_lavlahbonus_lavlah.bonus_huvi)
+values 	(10),
+		(20),
+		(30),
+		(25);
+insert into customer_with_kart ( customer_with_kart.bonus_lavlah_id,customer_with_kart.customer_id)
+ values (1,58),
+		(2,58),
+        (1,58),
+        (1,58);
+insert into jujigchin (jujigchin.jujigchin_ner)
+values 	('Jackie Chan'),
+		('Grace Vanderwaal'),
+        ('Alimaa'),
+        ('Khurlee');
+        
+insert into movie_has_jujigchin (movie_has_jujigchin.jujigchin_id, movie_has_jujigchin.movie_id)
+values 	(1,1),
+		(3,2);
+        
+insert into salbar (salbar_name, salbar.salbar_bairshil)
+values 	('Urguu1', 'Sukhbaatar Duureg'),
+		('Urguu2', 'Bayangol Duureg');
+        
+insert into tanhim (tanhim.tanhim_ner, tanhim.salbar_id)
+values 	('engiin-1', 1),
+		('vip' , 1),
+        ('engiin-1', 2),
+		('vip-2' , 1);
+
+insert into tsagiin_huvaari (tsagiin_huvaari.movie_id, tsagiin_huvaari.tanhim_id, tsagiin_huvaari.garah_ognoo, tsagiin_huvaari.garah_tsag)
+values 	(1, 1,now(),now());
+
+insert into zahialga (zahialga.zahialga_ognoo, zahialga.customer_id, zahialga.tsagiin_huvaari_id)
+values	(now(), 58,1),
+		(now(), 59,1);

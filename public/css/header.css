@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #F1D851;
+  position: fixed;
+  width: 100%;
+  height: 12%;
+  z-index: 2;
+  padding: 0px;
+
+}
+
+#music-doe{
+  top: 15px;
+  position: absolute;
+  left: 42%;
+  text-decoration: none;
+  font-size: 20px;
+  color: #264e70;
+}
+#music-doe:hover{
+  color: #f06c60;
+  left: 40.7%;
+  font-size: 25px;
+}
+
+a.nav-elements{
+  float: left;
+  color: black;
+  text-align: center;
+  font-size: 17px;
+  text-decoration: none;
+}
+.nav-elements{
+  right: 20px;
+  float: right;
+  background: #3AE995;
+  width: 235px;
+  height: 50px;
+  margin-top: 10px;
+
+}
+.nes-container.is-rounded {
+  margin-top: 7px;
+  padding: 0rem 0.5rem;
+}
+.element-icon{
+  width: 40px;
+  height: 40px;
+}
+img.element-icon:hover{
+  background: #FF7B5F;
+  color: #f2f2f2;
+  border-radius: 25px;
+}
+#logout-icon{    
+  position: absolute;
+  left: 10px;
+  top: 3px;
+}
+.nav-link{
+  float: right;
+  position: relative;
+  left: 20px;
+  top: 5px;
+  margin-right: 2%;
+
+}
+

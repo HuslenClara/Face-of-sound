@@ -1,0 +1,9 @@
+body{
+  background-color: #55A6BF;
+}
+.post-edit{
+  width: 60%;
+  top: 20%;
+  position: absolute;
+  left: 20%;
+}
