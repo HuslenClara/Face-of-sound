@@ -7,3 +7,17 @@ body{
   position: absolute;
   left: 20%;
 }
+p{
+  word-wrap:break-word;
+}
+.post-date{ 
+  position: absolute;
+  width: 30%;
+  bottom: 88%;
+  font-size: 10px;
+  left: 65%;
+  background-color: white;
+}
+.post{
+  background-color: #c2d4dd;
+}

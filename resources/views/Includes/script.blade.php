@@ -1,11 +1,32 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <script>
-    function loadingg(i,loading,progress){
+    function startTimer(duration) {
+        
+    var i = 0;
+    var timer = duration, minutes, seconds;
+    
+    progress = document.getElementById("progress-bar");
+    loading = document.getElementById('loading');
+    
+    interval = setInterval(function () { 
         i = i+1;
-        loading.innerHTML = i;
-        progress.value = i;
+        
         console.log(i);
-    }
+        if (i > duration) {
+            clearInterval(interval);
+        }
+        
+        progress.value = i*100/duration;
+        d = parseInt(i*100/duration);
+        if(d>=100){
+            loading.innerHTML = 100+'%';
+        }else{
+            loading.innerHTML = d+'%';
+        }
+        
+    }, 1000);
+}
+
     function blobToFile(theBlob, fileName){
     //A Blob() is almost a File() - it's just missing the two properties below which we will add
     theBlob.lastModifiedDate = new Date();
@@ -77,10 +98,14 @@
                 console.log(mediaRecorder.state);
             })
             colstart.addEventListener('click', (ev)=>{
+                
+                setTimeout(function(){
+                    
                 mediaRecorder.start();
+                }, 200);
                 console.log(mediaRecorder.state);
                 col = true;
-                setTimeout(parentAud.play(), 500);
+                parentAud.play();
                 console.log("collab is true");
             })
             stop.addEventListener('click', (ev)=>{
@@ -99,14 +124,13 @@
                     
             let parentAud = document.getElementById('parentAud');
             let parentAudID = document.getElementById('parentAudID');
-            let loading = document.getElementById('loading');
-            let progress = document.getElementById('progress-bar');
+        
                     parentAud.pause()
                 duration = parentAud.duration*1000;
                 console.log(duration);
                     console.log(parentAudID.innerHTML);
-                    collab(audioURL, parentAudID.innerHTML,duration);
-                    //setInterval(loadingg(0,loading,progress),30000);
+                    collab(audioURL, parentAud.src,duration);
+                    startTimer(duration/1000);
                 }
                 else if(col == false)
                 {

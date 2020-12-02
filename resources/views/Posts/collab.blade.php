@@ -20,28 +20,29 @@
 
             echo'<div class="nes-container with-title post"> 
             <span class="title">'.$post->user->username.' </span>
-            <span class="title title-right">'.$post->created_at.' </span>
+            <p class="post-date">'.$post->created_at.' </p>
             <p>'.$post->body.'</p> 
 
             <audio id="parentAud" controls controlsList="nodownload" src="'.$audio.'"></audio>
             </div>
-            <p id="parentAudID">'.$audio.'</p>'
+            <p id="parentAudID" hidden>'.$audio.'</p>'
         ?>
         <br><br>
         <progress id="progress-bar" class="nes-progress is-primary" value="0" max="100"></progress>
         <p id="loading"></p>
         <br>
         <audio id="aud2" controls></audio>
-        <div class="post">
+        <div class="post nes-container">
             <label for="Post">Шуугианы тайлбар</label><br>
             <textarea name="body" id="post-txt" placeholder="Шуугианы тухай..." rows="3" cols="35" required></textarea>
-            <input type="file" name="audiofile" id="audio-input">
+            <input type="file" name="audiofile" id="audio-input" hidden>
         </div>
         <input type="text" name="parent_post_id" value="{{$post->id}}" hidden>
         <input class="nes-btn is-success" type="submit" id="submit" value="Submit">
-    </form>
+
     <a href="/" class="nes-btn is-error">Cancel</a>
 
+    </form>
 </div>
 
 @endsection

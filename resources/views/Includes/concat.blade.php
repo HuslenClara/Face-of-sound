@@ -34,7 +34,7 @@ function collab(aud1, aud2,dur){
 		var len = Math.max.apply(Math, data.map(function(buffer) {
 			return buffer.byteLength
 		}));
-		context = new OfflineAudioContext(2, len, 44100);
+		context = new OfflineAudioContext(2, 44100*400, 44100);
 		return Promise.all(data.map(function(buffer) {
 			return audio.decodeAudioData(buffer)
 			.then(function(bufferSource) {
